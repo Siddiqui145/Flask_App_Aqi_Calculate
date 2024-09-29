@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>AQI Calculation</h1>
+
+    <form action="/calculate" method="POST">
+        <label for="pollutant">Choose a pollutant:</label>
+        <select name="pollutant" id="pollutant">
+            <option value="PM2.5">PM2.5</option>
+            <option value="PM10">PM10</option>
+        </select>
+
+        <label for="concentration">Enter concentration (µg/m³):</label>
+        <input type="number" step="0.1" id="concentration" name="concentration" required>
+
+        <button type="submit">Calculate AQI</button>
+    </form>
+
+    {% if aqi %}
+    <h2>Result:</h2>
+    <p>AQI Value: {{ aqi }}</p>
+    <p>Category: {{ category }}</p>
+    {% endif %}
+</body>
+</html>
