@@ -33,8 +33,8 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/aqi-calculator.git](https://github.com/Siddiqui145/Flask_App_Aqi_Calculate
-    cd Flask_App_Aqi_Calculate)
+    git clone https://github.com/Siddiqui145/Flask_App_Aqi_Calculate
+    cd Flask_App_Aqi_Calculate
     ```
 
 2. **Create a virtual environment** (recommended):
